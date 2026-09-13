@@ -2,10 +2,10 @@
 
 **Candidate submission — replace the placeholders below before sharing.**
 
-|                                                    | Repository                         | Live Deployment                        |
-| -------------------------------------------------- | ---------------------------------- | -------------------------------------- |
-| **Task 01 — POS Order & Inventory System**         | this repo, [`/task-01`](./task-01) | `<add Vercel/Render/Railway URL here>` |
-| **Task 02 — E-Commerce Checkout & Payment System** | this repo, [`/task-02`](./task-02) | `<add Vercel/Render/Railway URL here>` |
+|                                                    | Repository                         | Live Deployment                                                    |
+| -------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------ |
+| **Task 01 — POS Order & Inventory System**         | this repo, [`/task-01`](./task-01) | `https://techloom-assessment-task-02-client-gqnpajqua.vercel.app`                             |
+| **Task 02 — E-Commerce Checkout & Payment System** | this repo, [`/task-02`](./task-02) | `https://techloom-assessment-task-02-client-gqnpajqua.vercel.app` |
 
 ## Tech stack
 
