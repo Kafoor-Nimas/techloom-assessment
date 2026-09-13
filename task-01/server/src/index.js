@@ -9,7 +9,13 @@ async function main() {
   startReservationSweeper();
 
   const port = process.env.PORT || 4000;
-  app.listen(port, () => console.log(`[server] Task 01 POS API listening on port ${port}`));
+
+  app.get("/", (req, res) => {
+    res.json({ status: "ok", service: "Task 01 POS API" });
+  });
+  app.listen(port, () =>
+    console.log(`[server] Task 01 POS API listening on port ${port}`),
+  );
 }
 
 main().catch((err) => {
