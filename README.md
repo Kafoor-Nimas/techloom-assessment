@@ -3,15 +3,14 @@
 
 |                                                    | Repository                         | Live Deployment                                                    |
 | -------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------------ |
-| **Task 01 — POS Order & Inventory System**         | this repo, [`/task-01`](./task-01) | https://techloom-assessment-task-02-client-gqnpajqua.vercel.app                            |
+| **Task 01 — POS Order & Inventory System**         | this repo, [`/task-01`](./task-01) | https://techloom-assessment-peach.vercel.app                            |
 | **Task 02 — E-Commerce Checkout & Payment System** | this repo, [`/task-02`](./task-02) | https://techloom-assessment-task-02-client-gqnpajqua.vercel.app |
 
 ## Tech stack
 
 - **Frontend:** React + Tailwind CSS (Vite)
 - **Backend:** Node.js + Express
-- **Database:** MongoDB (Mongoose) — deploy on **MongoDB Atlas** so
-  multi-document transactions are available 
+- **Database:** MongoDB (Mongoose) — deploy on **MongoDB Atlas**  
 
 ## Repository structure
 
@@ -22,8 +21,7 @@
 
 Each task is a fully independent full-stack app with its own `server` and
 `client`, meant to be deployed as two separate services (e.g. two Vercel web
-services for the backends, two Vercel sites for the frontends), or
-combined behind a reverse proxy if preferred.
+services for the backends, two Vercel sites for the frontends)
 
 ## Quick start (both tasks)
 
@@ -63,5 +61,7 @@ npm run dev
 - **Database** → MongoDB Atlas free tier (M0). Whitelist `0.0.0.0/0` in
   Atlas's Network Access so the
   deployed backend can connect.
+
+**GitHub repository:** https://github.com/Kafoor-Nimas/techloom-assessment.git
 
 
