@@ -3,21 +3,21 @@ const { connectDB } = require("./db");
 const { createApp } = require("./app");
 const { startReservationSweeper } = require("./reservationSweeper");
 
-async function main() {
-  await connectDB();
-  const app = createApp();
-  startReservationSweeper();
+const app = createApp();
 
+app.get("/", (req, res) => {
+  res.json({ status: "ok", service: "Task 01 POS API" });
+});
+
+connectDB()
+  .then(() => startReservationSweeper())
+  .catch((err) => console.error("Failed to connect to DB:", err));
+
+if (require.main === module) {
   const port = process.env.PORT || 4000;
-  app.get("/", (req, res) => {
-    res.json({ status: "ok", service: "Task 01 POS API" });
-  });
   app.listen(port, () =>
-    console.log(`[server] Task 02 E-Commerce API listening on port ${port}`),
+    console.log(`[server] Task 01 POS API listening on port ${port}`),
   );
 }
 
-main().catch((err) => {
-  console.error("Failed to start server:", err);
-  process.exit(1);
-});
+module.exports = app; 
