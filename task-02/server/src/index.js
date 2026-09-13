@@ -6,7 +6,7 @@ const { startReservationSweeper } = require("./reservationSweeper");
 const app = createApp();
 
 app.get("/", (req, res) => {
-  res.json({ status: "ok", service: "Task 01 POS API" });
+  res.json({ status: "ok", service: "Task 02 E-Commerce Checkout & Payment System" });
 });
 
 connectDB()
