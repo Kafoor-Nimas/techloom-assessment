@@ -8,8 +8,13 @@ async function main() {
   const app = createApp();
   startReservationSweeper();
 
-  const port = process.env.PORT || 4001;
-  app.listen(port, () => console.log(`[server] Task 02 E-Commerce API listening on port ${port}`));
+  const port = process.env.PORT || 4000;
+  app.get("/", (req, res) => {
+    res.json({ status: "ok", service: "Task 01 POS API" });
+  });
+  app.listen(port, () =>
+    console.log(`[server] Task 02 E-Commerce API listening on port ${port}`),
+  );
 }
 
 main().catch((err) => {
