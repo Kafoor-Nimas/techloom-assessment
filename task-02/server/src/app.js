@@ -5,7 +5,27 @@ const ordersRouter = require("./routes/orders");
 
 function createApp() {
   const app = express();
-  app.use(cors({ origin: process.env.CLIENT_ORIGIN || "*" }));
+
+  const allowedOrigins = [
+    process.env.CLIENT_ORIGIN,
+    "http://localhost:5173",
+  ].filter(Boolean);
+
+  app.use(
+    cors({
+      origin(origin, callback) {
+        if (!origin) return callback(null, true); 
+
+        const isAllowed =
+          allowedOrigins.includes(origin) ||
+          /^https:\/\/techloom-assessment-task-02-client[a-z0-9-]*\.vercel\.app$/.test(origin);
+
+        if (isAllowed) return callback(null, true);
+        return callback(new Error(`Not allowed by CORS: ${origin}`));
+      },
+    })
+  );
+
   app.use(express.json());
 
   app.get("/api/health", (req, res) => res.json({ ok: true }));
